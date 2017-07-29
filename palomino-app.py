@@ -99,7 +99,24 @@ network.n_weights = store_dict["n_weights"]
 network.layers = store_dict["layers"]
 network.weights = store_dict["weights"]
 
-# TODO
+# TODO more user-friendly input-output mechanisms
 
-prediction_set = [Instance([3,3.4,3.06,1,0,0,0,1,1,11,0,0,0,1,0,68])]
-print(network.predict(prediction_set))
+a1 = input("Diagnosis: ")
+a2 = input("Forced vital capacity (FVC): ")
+a3 = input("Volume exhaled at the end of first second of forced expiration: ")
+a4 = input("Zubrod Score: ")
+a5 = input("Pain (Y: 1, N: 0): ")
+a6 = input("Haemoptysis (1/0): ")
+a7 = input("Dyspnoea (1/0): ")
+a8 = input("Cough (1/0): ")
+a9 = input("Weakness (1/0): ")
+a10 = input("T in clinical TNM, size of original tumour (11-14): ")
+a11 = input("Type 2 Diabetes Mellitus (1/0): ")
+a12 = input("MI up to 6 months (1/0): ")
+a13 = input("Peripheral arterial diseases (1/0): ")
+a14 = input("Smoking (1/0): ")
+a15 = input("Asthma (1/0): ")
+a16 = input("Age: ")
+
+prediction_set = [Instance([a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16])]
+print("Predicted Mortality: %d%" % network.predict(prediction_set) * 100)
