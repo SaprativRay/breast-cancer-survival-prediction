@@ -334,8 +334,7 @@ network        = neuralnet( settings )
 training_set   = dataset
 test_set       = dataset
 cost_function  = cross_entropy_cost
-from nimblenet.learning_algorithms import *
 learn(network, training_set, test_set, cost_function,
-                ERROR_LIMIT=0.09,
+                #ERROR_LIMIT=0.09,
                 #max_iterations=1000,
                 )
